@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  background-color: #f4f4f4;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 1px;
+}
+
+nav button {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #4CAF50; /* green */
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 12px;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+#code-editor {
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 2px solid #ccc;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.editor-panel, .preview-panel {
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#html-editor {
+  width: 100%;
+  height: calc(100% - 30px);
+  resize: none;
+  font-family: monospace;
+  font-size: 14px;
+  padding: 10px;
+}
+
+#live-preview {
+  width: 100%;
+  height: calc(100% - 30px);
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
