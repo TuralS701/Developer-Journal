@@ -1,32 +1,52 @@
 [
   {
-    "id": 1746129369652,
-    "text": "1",
+    "id": 1747047816191,
+    "text": "<h3 style=\"color: green;\">Border Style</h3>\n\n <div style=\"border-style: solid;\">Border-style: Solid</div>\n<br>\n <div style=\"border-style: dotted;\">Border-style: Doted</div>\n<br>\n <div style=\"border-style: dashed;\">Border-style: Dashed</div>\n<br>\n <div style=\"border-style: double;\">Border-style: Doube</div>\n<br>\n <div style=\"border-style: dotted solid double;\">Border-style: Doted Solid Double</div>\n<br>\n <div style=\"border-style: solid double dotted;\">Border-style: Solid Double Dotted</div>\n<br>\n <div style=\"border-style: solid double dotted dashed;\">Border-style: Solid Double Dotted Dashed</div>",
+    "category": "CSS"
+  },
+  {
+    "id": 1747047853830,
+    "text": "<h3 style=\"color: green;\">Div Border</h3>\n\nBorder - это короткий способ исопльзования 3 в 1. Style, Color and width. Они все должны быть заданы или не будeт работать.\n<br><br>\n\n <div style=\"border: solid 5px gray;\">Border: solid 5px gray</div>",
+    "category": "CSS"
+  },
+  {
+    "id": 1747047862558,
+    "text": "<h3 style=\"color: green;\">Border-Width</h3>\n\nWidth - не работает без Border Style\n\n<div style=\"border-width: thick; border-style: solid;\">Border-width: thick</div>\n<br>\n<div style=\"border-width: Medium; border-style: solid;\">Border-width: medium</div>\n<br>\n<div style=\"border-width: thin; border-style: solid;\">Border-width: thin</div>",
+    "category": "CSS"
+  },
+  {
+    "id": 1747050068823,
+    "text": "<h3 style=\"color: green;\">Border Radius</h3>\n<p>Акцент сделан на то, какую рамку вокруг картинки создаёт процентаж параметра Border Radius</p>\n<br>\n10% 20% 30% 40%\n<br>\n <img \nwidth=\"20%\"\nheight=\"20%\"\nstyle=\"border-radius: 10%; border: 2px solid black;\"\nsrc=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/H%C3%A5kon-Wium-Lie-2009-03.jpg/960px-%C3%A5kon-Wium-Lie-2009-03.jpg\"  \n>\n\n <img \nwidth=\"20%\"\nheight=\"20%\"\nstyle=\"border-radius: 20%; border: 2px solid black;\"\nsrc=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/H%C3%A5kon-Wium-Lie-2009-03.jpg/960px-%C3%A5kon-Wium-Lie-2009-03.jpg\"  \n>\n\n\n<img \nwidth=\"20%\"\nheight=\"20%\"\nstyle=\"border-radius: 30%; border: 2px solid black;\"\nsrc=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/H%C3%A5kon-Wium-Lie-2009-03.jpg/960px-%C3%A5kon-Wium-Lie-2009-03.jpg\"  \n>\n\n\n\n <img \nwidth=\"20%\"\nheight=\"20%\"\nstyle=\"border-radius: 40%; border: 2px solid black;\"\nsrc=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/H%C3%A5kon-Wium-Lie-2009-03.jpg/960px-%C3%A5kon-Wium-Lie-2009-03.jpg\"  \n>\n<br>\n50% 60% 70% 80%\n<br>\n <img \nwidth=\"20%\"\nheight=\"20%\"\nstyle=\"border-radius: 50%; border: 2px solid black;\"\nsrc=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/H%C3%A5kon-Wium-Lie-2009-03.jpg/960px-%C3%A5kon-Wium-Lie-2009-03.jpg\"  \n>\n\n\n <img \nwidth=\"20%\"\nheight=\"20%\"\nstyle=\"border-radius: 60%; border: 2px solid black;\"\nsrc=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/H%C3%A5kon-Wium-Lie-2009-03.jpg/960px-%C3%A5kon-Wium-Lie-2009-03.jpg\"  \n>\n\n\n\n <img \nwidth=\"20%\"\nheight=\"20%\"\nstyle=\"border-radius: 70%; border: 2px solid black;\"\nsrc=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/H%C3%A5kon-Wium-Lie-2009-03.jpg/960px-%C3%A5kon-Wium-Lie-2009-03.jpg\"  \n>\n\n\n\n <img \nwidth=\"20%\"\nheight=\"20%\"\nstyle=\"border-radius: 80%; border: 2px solid black;\"\nsrc=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/H%C3%A5kon-Wium-Lie-2009-03.jpg/960px-%C3%A5kon-Wium-Lie-2009-03.jpg\"  \n>\n<br>\n90%\n<br>\n <img \nwidth=\"20%\"\nheight=\"20%\"\nstyle=\"border-radius: 90%; border: 2px solid black;\"\nsrc=\"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/H%C3%A5kon-Wium-Lie-2009-03.jpg/960px-%C3%A5kon-Wium-Lie-2009-03.jpg\"  \n>",
+    "category": "CSS"
+  },
+  {
+    "id": 1747166210003,
+    "text": "<h3 style=\"color: green;\">Textarea</h3>\n\n<h3 style=\"color: green;\">Dir and Dirname</h3>\nАтрибут dir=\"rtl\"(left-to-right) задаёт последовательность букв слева направо\n<br>\nВ примере ниже указан dir=\"ltr\"(left-to-right)\n\n<textarea name=\"\" id=\"\" dir=\"rtl\"></textarea>\n\n<br><br>\n<h3 style=\"color: green;\">Maxlenght</h3>\n<br>\nСам говорит за себя, задаёт максимальное количество допустимых для ввода символов. Стоит не забывать о том, что такого сорта валидация может быть легко обойдена через console, соответственно валидаторы в БД так же должны быть прописаны\n<textarea name=\"\" id=\"\" dir=\"rtl\" maxlength=\"5\"></textarea>\n\n<h3 style=\"color: green;\">Readonly</h3>\n\n<textarea readonly>Не позволяет изменять текст. \ntextarea readonly</textarea>\n\n<h3 style=\"color: green;\">Required</h3>\n\n<textarea required>Обязателен к заполнению. \ntextarea required</textarea>\n\n<h3 style=\"color: green;\">Required</h3>\n\n<textarea wrap=\"soft\">Мягкий перенос текст не понял ещё как работает\ntextarea wrap=\"soft\"</textarea>\n\n<textarea wrap=\"hard\">Тяжёлый  перенос текст не понял ещё как работает \ntextarea wrap=\"hard\"</textarea>",
     "category": "HTML"
   },
   {
-    "id": 1746129370559,
-    "text": "2",
-    "category": "HTML"
+    "id": 1747734348111,
+    "text": "<h3 style=\"color: green;\">Быстрое копирование</h3>\n\nКлавиша для быстрого/моментального копирования всей строки. Кликаешь на строку, а затем жмёшь следующую комбинацию\nALT + SHIT + Key Down",
+    "category": "Notes&Problems"
   },
   {
-    "id": 1746129391617,
-    "text": "2",
-    "category": "HTML"
+    "id": 1747738050008,
+    "text": "<h3 style=\"color: green;\">Создание большого количества контейнеров</h3>\n\n.grid-item{$}*3\nСоздаёт 3 тэга div с классом grid-item и с содержанием 1,2,3.\n\nСимвол {$} - это означает, что будет работать increment.",
+    "category": "Notes&Problems"
   },
   {
-    "id": 1746129393215,
-    "text": "3",
-    "category": "HTML"
+    "id": 1747738483774,
+    "text": "<h3 style=\"color: green;\"> display: grid;</h3>\n\nЕсли открыть devtools и навести мышку на элемент, которому задат данный аттрибут, то будет видна сетка.\n\n<h3 style=\"color: green;\"> grid-template-columns: 100px 100px;</h3>\n\nСоздаёт 2 сетки с заданной шириной и выстраивает 2 контейнера в 1 ряд. Остальные будут с другой строки. Очень похоже на table td\n\n<h3 style=\"color: green;\"> grid-item:nth-child(3n + 1){\n  background-color: brown;\n}</h3>\n\nЭто значит:\n\nn — это целое число: 0, 1, 2, 3, ...\n\nФормула даёт:\n3*0 + 1 = 1 → 1-й элемент\n3*1 + 1 = 4 → 4-й элемент\n3*2 + 1 = 7 → 7-й элемент\n3*3 + 1 = 10 → 10-й элемент\nи т. д.",
+    "category": "CSS"
   },
   {
-    "id": 1746129394891,
-    "text": "4",
-    "category": "HTML"
+    "id": 1747751807455,
+    "text": "<h3 style=\"color: green;\">grid-template-columns: 1fr;</h3>\n\nЗадаёт ширину для первого элемента. Допустим у тебя 3 Div, если написать 3fr 1fr 1fr, то первому Div-у он даст больше места, чем двум остальным",
+    "category": "CSS"
   },
   {
-    "id": 1746129515081,
-    "text": "4",
-    "category": "HTML"
+    "id": 1747811878929,
+    "text": "<h3 style=\"color: green;\">grid-template-columns: repeat(3, 50px 100px); </h3>\n\nЭто функция. Она задаёт первому контейнеру 50px, а второму 100px и повторяет это 3 раза.\nТо есть первые 6 контейнеров будут иметь указанные параметры, а дальше дефолтные.",
+    "category": "CSS"
   }
 ]

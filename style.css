@@ -1,0 +1,21 @@
+/* Глобальный стиль */
+h2 {
+  color: black;
+}
+
+/* Только для заголовков внутри заметки */
+.note h2 {
+  color: green;
+  font-style: italic;
+}
+
+/* Только для заголовков внутри предупреждения */
+.alert > p {
+  color: rgb(60, 31, 164);
+  text-transform: uppercase;
+}
+
+.alert h2 {
+  color: rgb(201, 27, 7);
+  text-transform: uppercase;
+}

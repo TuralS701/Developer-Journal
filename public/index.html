@@ -1,74 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Developer Journal</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>📝 Developer Journal</h1>
 
-  
-  <!-- Navigation -->
+  <!-- Навигация по категориям -->
   <nav>
     <button onclick="switchCategory('HTML')">HTML</button>
     <button onclick="switchCategory('CSS')">CSS</button>
     <button onclick="switchCategory('JavaScript')">JavaScript</button>
     <button onclick="switchCategory('Backend')">Backend</button>
+    <button onclick="switchCategory('Notes&Problems')">Notes&Problems</button>
+    <button onclick="switchCategory('VSCode')">VSCode</button>
   </nav>
 
-  <!-- Add Entry Form -->
+  <!-- Форма для новой заметки -->
   <form id="journal-form">
-    <select id="entry-category">
-      <option value="HTML">HTML</option>
-      <option value="CSS">CSS</option>
-      <option value="JavaScript">JavaScript</option>
-      <option value="Backend">Backend</option>
-    </select>
-    <textarea id="entry-text" placeholder="What did you learn today?" required></textarea>
+    
+    <textarea id="entry-text" placeholder="What did you learn today?" required><h3 style="color: green;">Theme</h3></textarea>
     <button type="submit">Add Entry</button>
   </form>
 
+  <!-- Заголовок категории -->
   <h2 id="current-category-title">HTML Entries</h2>
-  <div id="toast" style="display:none; position:fixed; bottom:20px; right:20px; background:#333; color:#fff; padding:10px 20px; border-radius:5px; z-index:1000;">
-    Toast
-  </div>
+
+  <!-- Общая кнопка переключения режима -->
+  <button id="global-toggle">🔁 Switch View for All</button>
+
+  <!-- Список заметок -->
   <ul id="entries-list"></ul>
 
-
-
-
-
-  <div id="code-editor" style="border-color: blue;" >
-    <div class="editor-panel">
-      <h3><Edit style="background-color: #006e1d;">Edit HTML</h3></h3>
-      <textarea id="html-editor" placeholder="Write your HTML here...">
-  <h1>Hello World!</h1>
-  <p>This is a live preview.</p>
-      </textarea>
-    </div>
-    <div class="preview-panel">
-      <h3>Live Preview</h3>
-      <iframe id="live-preview"></iframe>
-    </div>
-  </div>
   <script src="app.js" defer></script>
-
-  <script>
-    const editor = document.getElementById('html-editor');
-    const preview = document.getElementById('live-preview');
-    
-    function updatePreview() {
-      const content = editor.value;
-      preview.srcdoc = content;
-    }
-    
-    // Initial load
-    updatePreview();
-    
-    // Live update on typing
-    editor.addEventListener('input', updatePreview);
-    </script>
-    
 </body>
 </html>

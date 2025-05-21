@@ -106,3 +106,20 @@ nav button {
   background-color: #ffffff;
 }
 
+div{
+  border: blue 3px;
+}
+
+.width1{
+  width: 300px;
+}
+
+.width2{
+  width: 40vw;
+}
+
+.width3{
+  width: 40%;
+}
+
+

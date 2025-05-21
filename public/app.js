@@ -1,9 +1,9 @@
-
+// === app.js ===
 const form = document.getElementById('journal-form');
 const entryText = document.getElementById('entry-text');
-const entryCategory = document.getElementById('entry-category');
 const entriesList = document.getElementById('entries-list');
 const categoryTitle = document.getElementById('current-category-title');
+const globalToggleBtn = document.getElementById('global-toggle');
 
 let currentCategory = 'HTML';
 let allEntries = [];
@@ -20,13 +20,18 @@ function renderEntries() {
     .filter(entry => entry.category === currentCategory)
     .forEach((entry) => {
       const li = document.createElement('li');
+      const encoded = encodeURIComponent(entry.text);
+
       li.innerHTML = `
         <div id="entry-${entry.id}" class="entry-container" style="max-width: 100%; word-wrap: break-word; padding: 10px; border: 1px solid #ccc; margin-bottom: 10px;">
-          <p id="entry-text-${entry.id}">${entry.text}</p>
+          <div>
+            <div id="entry-text-${entry.id}" data-raw="${encoded}" data-mode="html">${entry.text}</div>
+          </div>
           <button onclick="startEdit(${entry.id})">Edit</button>
           <button onclick="deleteEntry(${entry.id})">Delete</button>
         </div>
       `;
+
       entriesList.appendChild(li);
     });
 }
@@ -54,15 +59,15 @@ async function deleteEntry(id) {
 function startEdit(id) {
   const container = document.getElementById(`entry-${id}`);
   const textElement = document.getElementById(`entry-text-${id}`);
-  const oldText = textElement ? textElement.innerText : '';
+  const rawText = decodeURIComponent(textElement.getAttribute('data-raw') || '');
 
   container.innerHTML = '';
 
   const textarea = document.createElement('textarea');
   textarea.id = `edit-input-${id}`;
-  textarea.rows = 4;
+  textarea.rows = 8;
   textarea.style.width = '100%';
-  textarea.value = oldText;
+  textarea.value = rawText;
 
   const saveBtn = document.createElement('button');
   saveBtn.textContent = 'Save';
@@ -125,10 +130,9 @@ function showToast(message) {
 form.addEventListener('submit', function(e) {
   e.preventDefault();
   const text = entryText.value.trim();
-  const category = entryCategory.value;
   if (text !== '') {
-    addEntry(text, category);
-    entryText.value = '';
+    addEntry(text, currentCategory); // use the selected category tab
+    entryText.value = 'Theme:\n';
   }
 });
 
@@ -137,5 +141,25 @@ function switchCategory(category) {
   categoryTitle.innerText = `${category} Entries`;
   fetchEntries();
 }
+
+globalToggleBtn.addEventListener('click', () => {
+  const allEntries = document.querySelectorAll('[id^="entry-text-"]');
+  allEntries.forEach(el => {
+    const isHtml = el.getAttribute('data-mode') === 'html';
+    const raw = decodeURIComponent(el.getAttribute('data-raw'));
+
+    if (isHtml) {
+      el.innerHTML = raw
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/\n/g, '<br>');
+      el.setAttribute('data-mode', 'plain');
+    } else {
+      el.innerHTML = raw;
+      el.setAttribute('data-mode', 'html');
+    }
+  });
+});
 
 fetchEntries();
